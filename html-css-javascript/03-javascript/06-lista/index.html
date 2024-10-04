@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preencher Lista</title>
+</head>
+<body>
+
+<h2>Formulário</h2>
+<form id="myForm">
+    <label for="object">Objeto:</label>
+    <input type="text" id="object" name="object"><br><br>
+    <button type="button" onclick="adicionarObjeto()">Adicionar</button>
+</form>
+
+<h2>Lista de Objetos</h2>
+<ul id="objectList">
+</ul>
+
+<script>
+    function adicionarObjeto() {
+        var objeto = document.getElementById("object").value;
+        
+        if (objeto !== "") {
+            var lista = document.getElementById("objectList");
+            var listItem = document.createElement("li");
+            listItem.textContent = objeto;
+            lista.appendChild(listItem);
+            // Limpa o campo após adicionar à lista
+            document.getElementById("object").value = "";
+        } else {
+            alert("Por favor, insira um objeto.");
+        }
+    }
+</script>
+
+</body>
+</html>

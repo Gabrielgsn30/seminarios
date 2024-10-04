@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Simples</title>
+</head>
+<body>
+
+<h2>Conversor </h2>
+<form id="myForm">
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1" name="num1"><br><br>
+    <button type="button" onclick="calcular()">Calcular</button>
+</form>
+
+<p id="resultado"></p>
+
+<script>
+function calcular() {
+
+    var num1 = parseFloat(document.getElementById("num1").value);
+    let value = toCelsius(num1)
+    document.getElementById("resultado").textContent = "Resultado: " + value;
+}
+
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+/*
+toCelsius = (f) => {
+  return (5/9) * (f-32);
+}
+
+*/
+</script>
+
+</body>
+</html>

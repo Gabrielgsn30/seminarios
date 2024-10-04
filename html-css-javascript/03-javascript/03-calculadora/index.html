@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Simples</title>
+</head>
+<body>
+
+<h2>Calculadora Simples</h2>
+<form id="myForm">
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1" name="num1"><br><br>
+    <label for="num2">Número 2:</label>
+    <input type="number" id="num2" name="num2"><br><br>
+    <input type="radio" id="add" name="operation" value="add">
+    <label for="add">Adição</label>
+    <input type="radio" id="subtract" name="operation" value="subtract">
+    <label for="subtract">Subtração</label>
+    <input type="radio" id="multiply" name="operation" value="multiply">
+    <label for="multiply">Multiplicação</label>
+    <input type="radio" id="divide" name="operation" value="divide">
+    <label for="divide">Divisão</label>
+    <input type="radio" id="pow" name="operation" value="pow">
+    <label for="pow">Potencia</label><br><br>
+    <button type="button" onclick="calcular()">Calcular</button>
+</form>
+
+<p id="resultado"></p>
+
+<script>
+    function calcular() {
+        // Obtém os valores dos números
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+
+        // Verifica qual operação foi selecionada
+        var operacao;
+        if (document.getElementById("add").checked) {
+            operacao = "+";
+        } else if (document.getElementById("subtract").checked) {
+            operacao = "-";
+        } else if (document.getElementById("multiply").checked) {
+            operacao = "*";
+        } else if (document.getElementById("divide").checked) {
+            operacao = "/";
+        } else if (document.getElementById("pow").checked){
+            operacao = "**";
+        }
+        // Executa a operação e exibe o resultado
+        var resultado;
+        switch (operacao) {
+            case "+":
+                resultado = num1 + num2;
+                break;
+            case "-":
+                resultado = num1 - num2;
+                break;
+            case "*":
+                resultado = num1 * num2;
+                break;
+            case "/":
+                resultado = num1 / num2;
+                break;
+            case "**":
+                resultado = (num1 ** num2);
+                break;
+            default:
+                resultado = "Selecione uma operação.";
+        }
+
+        // Exibe o resultado no parágrafo
+        document.getElementById("resultado").textContent = "Resultado: " + resultado;
+    }
+</script>
+
+</body>
+</html>
