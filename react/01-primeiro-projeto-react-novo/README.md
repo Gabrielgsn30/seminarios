@@ -1,6 +1,6 @@
 
 comandos:
-
+npm config set strict-ssl false (comando desativa verificacao ssl, necessaria para os computadores da PUC)
 npm create vite@latest
 comando para criar o projeto em react
 
