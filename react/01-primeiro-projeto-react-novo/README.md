@@ -1,16 +1,14 @@
 
 comandos:
 
-npm create vite@latest
-comando para criar o projeto em react
+npm config set strict-ssl false (comando desativa verificacao ssl, necessaria para os computadores da PUC)
+
+npm create vite@latest (comando para criar o projeto em react)
 
 
-npm install
-comando para instalar as dependencias
+npm install (comando para instalar as dependencias)
 
-npm run dev
-
-para executar a aplicacao que está em react
+npm run dev (para executar a aplicacao que está em react)
 
 
 
