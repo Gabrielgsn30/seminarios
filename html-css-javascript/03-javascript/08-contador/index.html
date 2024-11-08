@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contador Simples</title>
+</head>
+<body>
+
+<h2>Contador </h2>
+
+<button type="button" onclick="calcular()">Calcular</button>
+<br>
+<button type="button" onclick="dobrar()">dobrar</button>
+<br>
+<button type="button" onclick="zerar()">zerar</button>
+<p id="resultado"> 0 </p>
+
+<script>
+var contador = 0;
+function calcular() {
+
+    contador ++;
+    document.getElementById("resultado").textContent = contador;
+}
+
+
+function dobrar() {
+
+contador = contador * 2;
+document.getElementById("resultado").textContent = contador;
+}
+
+function zerar() {
+
+contador = 0 ;
+document.getElementById("resultado").textContent = contador;
+}
+</script>
+
+</body>
+</html>
