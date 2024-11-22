@@ -1,0 +1,75 @@
+/* Reset and global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--header-bg);
+  color: var(--header-color);
+}
+
+.theme-toggle-btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+  opacity: 0.9;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--body-bg);
+  color: var(--body-color);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--footer-bg);
+  color: var(--footer-color);
+}
+
+/* Light Theme */
+.light {
+  --header-bg: #f8f9fa;
+  --header-color: #333;
+  --body-bg: #ffffff;
+  --body-color: #000000;
+  --footer-bg: #f8f9fa;
+  --footer-color: #333;
+  --button-bg: #007bff;
+  --button-color: #ffffff;
+}
+
+/* Dark Theme */
+.dark {
+  --header-bg: #343a40;
+  --header-color: #ffffff;
+  --body-bg: #212529;
+  --body-color: #ffffff;
+  --footer-bg: #343a40;
+  --footer-color: #ffffff;
+  --button-bg: #ffc107;
+  --button-color: #000000;
+}
