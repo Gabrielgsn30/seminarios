@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 // Define o componente funcional ListaDinamica.
@@ -14,6 +12,7 @@ function ListaDinamica() {
     if (inputValue.trim()) {
       // Verifica se o valor não é uma string vazia (após remover espaços em branco).
       setLista([...lista, inputValue.trim()]);
+      // ... spread operator basicamente copia a list, Isso nos permite copiar rapidamente todo ou partes de um array existente para outro array nos permite acessar rapidamente o valor dar updates
       // Adiciona o item à lista, criando uma nova array com os itens anteriores e o novo item.
       setInputValue(''); // Limpa o campo de entrada após adicionar
     }

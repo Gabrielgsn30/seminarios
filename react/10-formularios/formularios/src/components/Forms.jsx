@@ -15,7 +15,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name,email);
-    window.alert(name,email);
+    window.alert([name,email]);
 
   };
 
