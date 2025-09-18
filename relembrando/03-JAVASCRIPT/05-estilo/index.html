@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alterar Tamanho da Fonte</title>
+</head>
+<body>
+
+<h2>Alterar Tamanho da Fonte</h2>
+
+<form id="myForm">
+    <label for="fontSize">Tamanho da Fonte (em pixels):</label>
+    <input type="number" id="fontSize" name="fontSize" min="1"><br>
+    <br>
+
+    <label for="cores">Escolha a Cor:</label>
+    <input type="color" id="cor"> <br>
+
+    <label for="backgroundcolor">Escolha a Cor de fundo:</label>
+    <input type="color" id="backgroundcolor"> <br>
+
+      <label for="cars">Choose a car:</label>
+  <select id="fontes" name="fontes">
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Arial">Arial</option>
+    <option value="Lucida Consol" selected>Lucida Consol</option>
+  </select>
+
+
+      <br>
+    <button type="button" onclick="alterarTamanhoFonte()">Aplicar</button>
+    <br>
+</form>
+
+<p id="textoAleatorio">Mudando tamanho da fonte.</p>
+
+<script>
+    function alterarTamanhoFonte() {
+        // Obtém o tamanho da fonte do input
+    var tamanhoFonte = document.getElementById("fontSize").value;
+    var cor = document.getElementById("cor").value;
+    var tipofonte = document.getElementById("fontes").value;
+    var cordefundo = document.getElementById("backgroundcolor").value
+    // Aplica o tamanho da fonte ao parágrafo
+    document.getElementById("textoAleatorio").style.fontSize = 
+    tamanhoFonte + "px";
+    document.getElementById("textoAleatorio").style.color = cor;
+    //document.getElementById("textoAleatorio").style.
+    document.getElementById("textoAleatorio").style.fontFamily = tipofonte;
+
+    document.getElementById("textoAleatorio").style.backgroundColor = cordefundo;
+    }
+</script>
+
+</body>
+</html>

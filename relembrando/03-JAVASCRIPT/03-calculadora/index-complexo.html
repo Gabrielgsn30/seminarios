@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Simples</title>
+  <script 
+src="https://cdn.jsdelivr.net/npm/mathjs@11.11.0/lib/browser/math.js">
+</script>
+
+</head>
+<body>
+  <h2>Calculadora com um campo</h2>
+  <input type="text" id="entrada" 
+  placeholder="Digite a expressão, ex: 2+2*3">
+  <br>
+  <button onclick="calcular()">Calcular</button>
+  <div id="resultado"></div>
+  <script>
+    function calcular() {
+      const entrada = document.getElementById('entrada').value;
+      const resultado = document.getElementById('resultado');   
+      try {
+        //const valor = eval(entrada);
+        const valor = math.evaluate(entrada);
+        resultado.textContent = `Resultado: ${valor}`;
+      } catch (e) {
+        resultado.textContent = "Expressão inválida.";
+      }
+    }
+  </script>
+</body>
+</html>

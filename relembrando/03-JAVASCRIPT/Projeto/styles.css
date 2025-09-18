@@ -1,0 +1,115 @@
+/* ADICIONE no topo */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ALTERE o body para usar flexbox */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* MANTENHA seu conteúdo principal com flex-grow */
+section {
+  text-align: center;
+  padding: 40px 20px;
+  flex: 1;
+}
+
+/* Rodapé sempre no final */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ccc;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ddd;
+  padding: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  /* herda cor do elemeto pai*/
+  color: inherit;
+  font-weight: bold;
+}
+
+section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Temas */
+body.claro {
+  background-color: white;
+  color: black;
+}
+
+body.escuro {
+  background-color: #121212;
+  color: white;
+}
+
+body.escuro .navbar {
+  background-color: #1f1f1f;
+}
+
+body.escuro footer {
+  background-color: #1f1f1f;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #888;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #555;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+
