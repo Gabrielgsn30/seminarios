@@ -1,0 +1,22 @@
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+
+#link {
+    color: chartreuse;
+}
+
+.tabelas {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+} 
+
+.lista {
+    background-color: blue;
+    color: blueviolet;
+    text-align:left;
+}
