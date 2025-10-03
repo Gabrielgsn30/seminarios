@@ -8,6 +8,7 @@ function App() {
       {/* Hooks Contador */}
       <Contador title='Primeiro contador'/>
       <Contador title='Segundo contador'/>
+      <Contador title='Terceiro contador'/>
     </div>
   );
 }

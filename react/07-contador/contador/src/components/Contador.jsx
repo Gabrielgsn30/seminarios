@@ -5,7 +5,10 @@ const Contador = ({title}) => {
     const [contador, setContador] = useState(0);
     return (
     <div>
-         <button onClick={()=> setContador(contador+1)}>{title}:{contador}</button>
+         <button 
+         onClick={()=> setContador(contador+1)}>
+            {title}:{contador}
+        </button>
     </div>
     );
 };
