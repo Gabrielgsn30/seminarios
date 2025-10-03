@@ -1,6 +1,5 @@
 import '../App.css'
 
-
 function MensagemProps(props) {
   return (
     <div>
@@ -9,5 +8,4 @@ function MensagemProps(props) {
     </div>
   );
 }
-
 export default MensagemProps

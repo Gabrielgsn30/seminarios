@@ -1,6 +1,5 @@
 import '../App.css'
 
-
 function Mensagem({ titulo, subtitulo }) {
   return (
     <div>
@@ -9,5 +8,4 @@ function Mensagem({ titulo, subtitulo }) {
     </div>
   );
 }
-
 export default Mensagem
