@@ -11,6 +11,7 @@ function Mural({ alunos }) {
           nome={aluno.nome} 
           idade={aluno.idade} 
           foto={aluno.foto} 
+          cor={aluno.cor}
         />
       ))}
     </div>
