@@ -1,0 +1,25 @@
+# stage 1: build
+FROM node:18-alpine AS builder
+WORKDIR /app
+
+# instala dependências com cache
+COPY package*.json ./
+RUN npm ci --silent
+
+# copia código e gera build Vite (gera /app/dist)
+COPY . .
+RUN npm run build
+
+# stage 2: serve com nginx
+FROM nginx:alpine AS production
+# limpa conteúdo padrão
+RUN rm -rf /usr/share/nginx/html/*
+
+# copia o dist gerado pelo Vite
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# opcional: substitua o default.conf para suportar SPA routing
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
